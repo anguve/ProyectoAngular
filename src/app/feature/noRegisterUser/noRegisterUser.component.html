@@ -1,0 +1,25 @@
+<div class="noRegisterUser">
+    <h1 class="noRegisterUser__title">
+        Cafes coloniales
+    </h1>
+    <div class="noRegisterUser__body">
+        <ul class="noRegisterUser__list">
+            <li *ngFor="let product of arrProduct">
+                <div class="listBody">
+                    <div class="listBody__namePrice">
+                        <span>{{product.name}}</span>
+                    </div>
+
+                    <div class="listBody__image">
+                        <img src='http://localhost:8000/{{product.image}}' alt="">
+                    </div>
+                    <div class="listBody__footer">
+                        <span class="listBody__footerPrice">Precio: <span > ${{product.price}}</span></span>
+
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</div>

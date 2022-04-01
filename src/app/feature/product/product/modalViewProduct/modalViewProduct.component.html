@@ -1,0 +1,39 @@
+<div class="modalRegisterUser">
+    <div class="modalRegisterUser__times">
+        <span (click)="closeModal()"> <fa-icon [icon]="faTimes"></fa-icon> </span>
+    </div>
+
+    <div class="modalRegisterUser__body">
+        <ul class="modalRegisterUser__list">
+            <li>
+                <div class="listBody">
+                    <div class="listBody__category">
+                        <span class="listBody__categoryProduct">Categoria: <span> {{arrProduct.category}}</span></span>
+                    </div>
+                    <div class="listBody__namePrice">
+                        <span class="listBody__name">Nombre: <span> {{arrProduct.name}}</span></span>
+                        <span class="listBody__price">Precio:<span> ${{arrProduct.price}}</span></span>
+
+                    </div>
+
+                    <div class="listBody__image">
+                        <img src='http://localhost:8000/{{arrProduct.image}}' alt="">
+                    </div>
+                    <div class="listBody__footer">
+                        <div class="listBody__description">
+                            <span class="listBody__descriptionName">Descripcion:<span> {{arrProduct.description}}</span></span>
+                            <span class="listBody__reference">Referencia: <span> {{arrProduct.reference}}</span></span>
+
+                        </div>
+                        <div class="listBody__stock">
+                            <span class="listBody__stockD">Disponibles:<span> {{arrProduct.stock}}</span></span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="editroll">
+    <form class="form" [formGroup]="rollForm">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input formControlName="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="nombre" [value]="rollData.name">
+
+        </div>
+        <div class="form-group">
+            <label for="Email">permisos</label>
+            <input formControlName="permission" type="text" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="permisos">
+
+        </div>
+        <button type="button" class="btn btn-success" (click)="putRolls()">editar</button>
+    </form>
+</div>

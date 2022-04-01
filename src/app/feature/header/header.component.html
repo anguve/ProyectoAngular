@@ -1,0 +1,38 @@
+<div class="header">
+    <div class="header__nav">
+        <span (click)="open()" *ngIf="fglDataLoginAdmin">
+          <fa-icon class="header__faIconFaBars" [icon]="faBars"></fa-icon>
+        </span>
+    </div>
+    <div class="header__logo">
+        <span>
+          <a routerLink="/"><fa-icon class="header__faIconCoffe"  [icon]="faMugHot"></fa-icon></a>
+        </span>
+    </div>
+
+    <div class="header__credencial" *ngIf="!fglDataLogin">
+        <div *ngIf="router.url !== '/login'">
+            <span>
+            <fa-icon class="header__faIconLogin"  [icon]="faArrowRightToBracket"></fa-icon>
+            <a routerLink="/login">Iniciar sesión</a>
+          </span>
+        </div>
+        <div *ngIf="router.url !== '/registro'">
+            <span>
+              <fa-icon class="header__faIconRegister"  [icon]="faAddressCard"></fa-icon>
+              <a routerLink="/registro">Registrarme</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="header__credencial" *ngIf="fglDataLogin">
+        <div>
+            <span (click)="logout()">
+            <fa-icon class="header__faIconLogin"  [icon]="faArrowRightToBracket"></fa-icon>
+            <a routerLink="/" >Cerrar sesión</a>
+          </span>
+        </div>
+
+    </div>
+
+</div>

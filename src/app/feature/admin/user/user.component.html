@@ -1,0 +1,27 @@
+<div class="panelAdmin">
+    <!-- <button type="button" class="btn btn-success">Crear Usuario</button> -->
+    <table class="table table-striped panelAdmin__table">
+        <thead>
+            <tr>
+                <th scope="col">Usuarios</th>
+                <th scope="col">Nombre Usuario</th>
+                <th scope="col">Status</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usersData ">
+                <th scope="row">{{user.email}}</th>
+                <th scope="row">{{user.username}}</th>
+                <th scope="row">{{user.status}}</th>
+
+
+                <td><button type="button" class="btn btn-warning" (click)="editToUser(user.id)">Editar</button></td>
+                <td><button type="button" class="btn btn-danger" (click)="deleteToUser(user.id)">Eliminar</button></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

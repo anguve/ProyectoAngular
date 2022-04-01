@@ -1,0 +1,22 @@
+<div class="panelAdmin">
+    <button type="button" class="btn btn-success" (click)="createRoll()">Crear roll</button>
+    <table class="table table-striped panelAdmin__table">
+        <thead>
+            <tr>
+                <th scope="col">Roll</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let roll of rollData ">
+                <th scope="row">{{roll.name}}</th>
+
+                <td><button type="button" class="btn btn-warning" (click)="editRoll(roll.id)">Editar</button></td>
+                <td><button type="button" class="btn btn-danger" (click)="deleteRoll(roll.id)">Eliminar</button></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

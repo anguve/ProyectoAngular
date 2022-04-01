@@ -1,0 +1,16 @@
+.modalHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(244, 248, 17);
+        font-size: 2rem;
+    }
+}

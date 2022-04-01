@@ -1,0 +1,13 @@
+<div>
+    <div>
+        <form [formGroup]="formSell">
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Cantidad</label>
+                <input formControlName="quantity" type="number" class="form-control" id="exampleInputPassword1" placeholder="Cantidad">
+            </div>
+            <button type="button" class="btn btn-success" (click)="postSell()"><fa-icon [icon]="faCartShopping"></fa-icon>Comprar</button>
+        </form>
+    </div>
+
+</div>
